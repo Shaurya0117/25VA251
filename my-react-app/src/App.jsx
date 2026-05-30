@@ -35,6 +35,8 @@ function App() {
 
   return (
     <>
+
+    <h1> HELLO</h1>
     {/*
     <h1>Registration Form</h1>
 <input type="text" placeholder="Enter Your Name" onChange={(e)=>setName(e.target.value)}/><br/>
