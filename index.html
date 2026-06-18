@@ -5,7 +5,35 @@
     <link rel="icon" type="image/svg+xml" href="/25VA251/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazon Clone</title>
-    <script type="module" crossorigin src="/25VA251/assets/index-f0964690.js"></script>
+    <script type="text/javascript">
+      // Handle GitHub Pages SPA redirect from 404.html
+      // This script checks if we're coming from a 404 redirect with ?/
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+        
+        // Check for the ?/ pattern from 404.html redirect
+        if (location.search.startsWith('/?')) {
+          // Extract the path after /?
+          var path = location.search.substring(2);
+          // Decode the ~and~ back to &
+          path = path.replace(/~and~/g, '&');
+          // Restore the hash if it was preserved
+          var hashMatch = location.hash.match(/^#(.*)/);
+          if (hashMatch) {
+            path += hashMatch[1];
+          }
+          // Store in sessionStorage and reload clean
+          sessionStorage.redirect = '/25VA251' + (path ? '/' + path : '/');
+          history.replaceState(null, null, '/25VA251/');
+          location.reload();
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/25VA251/assets/index-9c8b35a7.js"></script>
     <link rel="stylesheet" href="/25VA251/assets/index-bd6ba1e7.css">
   </head>
   <body>

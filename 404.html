@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>Amazon Clone</title>
+    <title>Single Page App</title>
     <script type="text/javascript">
-        // GitHub Pages SPA redirect - redirect all traffic to index.html
-        var path = location.pathname;
-        var parts = path.split('/').filter(Boolean);
-        
-        // If coming from 404, redirect to base with hash
-        if (parts.length > 1) {
-            var hash = '/' + parts.slice(1).join('/');
-            location.replace('/25VA251/#' + hash);
-        } else {
-            location.replace('/25VA251/');
-        }
+      // Single Page Apps for GitHub Pages
+      // MIT License https://github.com/rafgraph/spa-github-pages
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/25VA251/?/' +
+        l.pathname.slice(1).replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
     </script>
-</head>
-<body>
-</body>
+  </head>
+  <body>
+  </body>
 </html>
