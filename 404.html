@@ -4,14 +4,18 @@
     <meta charset="utf-8">
     <title>Amazon Clone</title>
     <script type="text/javascript">
-        // GitHub Pages SPA redirect for client-side routing
+        // GitHub Pages SPA redirect - redirect all traffic to index.html
         var path = location.pathname;
-        // Store the current path for React Router to handle
-        if (!path.includes('index.html')) {
-            sessionStorage.redirect = path;
+        var parts = path.split('/').filter(Boolean);
+        
+        // If coming from 404, redirect to base with hash
+        if (parts.length > 1) {
+            var hash = '/' + parts.slice(1).join('/');
+            location.replace('/25VA251/#' + hash);
+        } else {
+            location.replace('/25VA251/');
         }
     </script>
-    <meta http-equiv="refresh" content="0;url=/25VA251/" />
 </head>
 <body>
 </body>
