@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=./" />
-    <title>Redirecting...</title>
-    <script>
-        window.location.replace('./');
+    <meta charset="utf-8">
+    <title>Amazon Clone</title>
+    <script type="text/javascript">
+        // GitHub Pages SPA redirect for client-side routing
+        var path = location.pathname;
+        // Store the current path for React Router to handle
+        if (!path.includes('index.html')) {
+            sessionStorage.redirect = path;
+        }
     </script>
+    <meta http-equiv="refresh" content="0;url=/25VA251/" />
 </head>
-
 <body>
-    <p>If you are not redirected automatically, <a href="./">click here</a>.</p>
 </body>
-
 </html>
