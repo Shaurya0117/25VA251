@@ -45,10 +45,6 @@ I created this repository to learn, practice, and improve my web development and
 ### Java
 - Basic Java Programs
 - OOP Concepts
-- Classes and Objects
-- Inheritance
-- Polymorphism
-- Exception Handling
 
 ### React
 - React Basics
@@ -65,16 +61,6 @@ I created this repository to learn, practice, and improve my web development and
 ### 🛒 Amazon Clone
 A responsive Amazon-inspired e-commerce website built using React, HTML, CSS, and JavaScript.
 
-### 🎓 Student Grade Calculator
-Calculates total marks, average marks, and grades based on user input.
-
-### 📋 Other Practice Projects
-- Form Validation
-- Calculator
-- Landing Pages
-- Interactive UI Components
-
----
 
 ## 🛠️ Technologies Used
 
